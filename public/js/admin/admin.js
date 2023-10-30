@@ -2,7 +2,7 @@ const token = localStorage.getItem('token');
 
 window.addEventListener('DOMContentLoaded', async ()=>{
 
-    const res = await axios.get('https://prashant-kumar.onrender.com/admin/company-info', { headers: { Authorization: token}});
+    const res = await axios.get('/admin/company-info', { headers: { Authorization: token}});
 
     const members = res.data.info;
 
@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', async ()=>{
     }
     console.log(res.data);
 
-    const result = await axios.get('https://prashant-kumar.onrender.com/admin/members-info',{ headers: { Authorization: token}});
+    const result = await axios.get('/admin/members-info',{ headers: { Authorization: token}});
 
     const message = result.data.message;
     const newMembers = result.data.newMembers

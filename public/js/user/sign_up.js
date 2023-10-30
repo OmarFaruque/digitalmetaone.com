@@ -82,7 +82,7 @@ document.getElementById('sign_up').addEventListener('click', async (e)=>{
 
         if(cpassword.value === obj.password){
 
-            const res = await axios.post("https://prashant-kumar.onrender.com/user/sign_up", obj);
+            const res = await axios.post("/user/sign_up", obj);
             
             if(res.data.message === 'userExist'){
                 alert('email already exist please login');
@@ -124,7 +124,7 @@ document.getElementById("login-btn").addEventListener("click", async (e) => {
   };
 
   try {
-    let res = await axios.post("https://prashant-kumar.onrender.com/user/login", obj);
+    let res = await axios.post("/user/login", obj);
 
     if (res.data.message === "userNotExist") {
 

@@ -68,7 +68,7 @@ const PORT = process.env.PORT;
 sequelize
       .sync()
       .then((res) => {
-        app.listen(4000 || PORT);
+        app.listen(3000 || PORT);
         console.log("listening");
       })
       .catch((err) => {

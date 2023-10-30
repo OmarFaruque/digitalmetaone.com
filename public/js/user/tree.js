@@ -2,7 +2,7 @@ const user = JSON.parse(localStorage.getItem('user'));
 
 async function getTree() {
     console.log("get tree");
-    const result = await axios.get(`https://prashant-kumar.onrender.com/main/tree-data/${user.id}`);
+    const result = await axios.get(`/main/tree-data/${user.id}`);
   
     const treeDOMElement = document.querySelector(".tree");
   
@@ -58,7 +58,7 @@ async function getTree() {
   
       if (e.target.firstElementChild === null) {
         const result = await axios.get(
-          "https://prashant-kumar.onrender.com/main/tree-data/" + data.element.id
+          "/main/tree-data/" + data.element.id
         );
   
         let parent = e.target.parentElement;

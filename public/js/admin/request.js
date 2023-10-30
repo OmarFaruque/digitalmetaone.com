@@ -110,7 +110,7 @@ function showRequest(request, type) {
       document.getElementById("image").style.visibility = "visible";
       document.getElementById(
         "image"
-      ).src = `https://prashant-kumar.onrender.com/main/get-image/${request.id}`;
+      ).src = `/main/get-image/${request.id}`;
     } else {
       transactionId.innerText = "Crypto Id: " + request.cryptoId;
       document.getElementById("image").style.visibility = "hidden";
@@ -145,7 +145,7 @@ async function updateRequest(request, status, type) {
 
     if (type === "joining") {
       res = await axios.put(
-        "https://prashant-kumar.onrender.com/admin/joining-request",
+        "/admin/joining-request",
         obj,
         {
           headers: { Authorization: token },
@@ -153,7 +153,7 @@ async function updateRequest(request, status, type) {
       );
     } else {
       res = await axios.put(
-        "https://prashant-kumar.onrender.com/admin/widthdrawl-request",
+        "/admin/widthdrawl-request",
         obj,
         {
           headers: { Authorization: token },

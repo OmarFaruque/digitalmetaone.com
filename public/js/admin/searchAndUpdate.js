@@ -24,7 +24,7 @@ document.getElementById("search").addEventListener("click", async (e) => {
     };
 
     const res = await axios.post(
-      "https://prashant-kumar.onrender.com/admin/search-users",
+      "/admin/search-users",
       obj,
       {
         headers: { Authorization: token },
@@ -141,7 +141,7 @@ document.getElementById("update").addEventListener("click", async (e) => {
     };
 
     const res = await axios.post(
-      "https://prashant-kumar.onrender.com/admin/update-user",
+      "/admin/update-user",
       obj,
       {
         headers: { Authorization: token },

@@ -4,7 +4,7 @@ const user = JSON.parse(localStorage.getItem("user"));
 
 async function getMembers() {
   try {
-    let res = await axios.get("https://prashant-kumar.onrender.com/main/members", {
+    let res = await axios.get("/main/members", {
       headers: { Authorization: token },
     });
 

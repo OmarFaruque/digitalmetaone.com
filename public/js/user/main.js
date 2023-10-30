@@ -26,7 +26,7 @@ if (user.planType === null) {
 
 async function getEarning() {
   try {
-    let res = await axios.get("https://prashant-kumar.onrender.com/main/earning", {
+    let res = await axios.get("/main/earning", {
       headers: { Authorization: token },
     });
 
@@ -46,7 +46,7 @@ async function getEarning() {
 document.getElementById('id').innerText = "User Id: " + user.id;
 document.getElementById('user-name').innerText = "Name: " + user.name;
 document.getElementById('Plan-type').innerText = "Acive Level: " + user.planType;
-document.getElementById('image').src = `https://prashant-kumar.onrender.com/main/user-image/${user.id}`;
+document.getElementById('image').src = `/main/user-image/${user.id}`;
 
 
 
@@ -94,7 +94,7 @@ document.getElementById("upload").addEventListener("click", async (e) => {
     formData.append("info", JSON.stringify(obj));
 
     const res = await axios.post(
-      "https://prashant-kumar.onrender.com/main/joining-request",
+      "/main/joining-request",
       formData,
       {
         headers: {
@@ -118,7 +118,7 @@ document.getElementById("upload").addEventListener("click", async (e) => {
 document.getElementById("boost-income").addEventListener("click", async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.get("https://prashant-kumar.onrender.com/main/join-boost-board", {
+    const res = await axios.get("/main/join-boost-board", {
       headers: { Authorization: token },
     });
 

@@ -1,6 +1,6 @@
 async function getTree() {
   console.log("get tree");
-  const result = await axios.get("https://prashant-kumar.onrender.com/admin/tree-data/11");
+  const result = await axios.get("/admin/tree-data/11");
 
   const treeDOMElement = document.querySelector(".tree");
 

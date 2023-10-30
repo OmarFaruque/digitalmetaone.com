@@ -27,7 +27,7 @@ const token = localStorage.getItem("token");
 
 async function getwallet() {
   try {
-    let res = await axios.get("https://prashant-kumar.onrender.com/main/wallet-info", {
+    let res = await axios.get("/main/wallet-info", {
       headers: { Authorization: token },
     });
     if (res.data.message === "got") {
@@ -68,7 +68,7 @@ document.getElementById("widthdraw").addEventListener("click", async (e) => {
     };
 
     const res = await axios.post(
-      "https://prashant-kumar.onrender.com/widthdrawl-request",
+      "/widthdrawl-request",
       obj,
       {
         headers: { Authorization: token },
@@ -93,7 +93,7 @@ document.getElementById("widthdraw").addEventListener("click", async (e) => {
 async function getHistory() {
   try {
     const res = await axios.get(
-      "https://prashant-kumar.onrender.com/main/widthdrawl-history",
+      "/main/widthdrawl-history",
       {
         headers: { Authorization: token },
       }
@@ -161,7 +161,7 @@ document.getElementById('activate').addEventListener('click', async(e)=>{
     console.log(obj);
 
     const res = await axios.post(
-      "https://prashant-kumar.onrender.com/main/activate-friend", obj,
+      "/main/activate-friend", obj,
       {
         headers: { Authorization: token },
       }
